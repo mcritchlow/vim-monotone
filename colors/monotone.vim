@@ -143,8 +143,8 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	" Messages
 	call s:Hi('Error', s:color_hl_1, 'NONE', 203, 'NONE', 'bold')
 	call s:Hi('ErrorMsg', s:color_hl_1, 'NONE', 203, 'NONE', 'bold')
-	call s:Hi('Warning', s:color_hl_2, 'NONE', 203, 'NONE', 'NONE')
-	call s:Hi('WarningMsg', s:color_hl_2, 'NONE', 203, 'NONE', 'bold')
+	call s:Hi('Warning', s:color_hl_2, 'NONE', 214, 'NONE', 'NONE')
+	call s:Hi('WarningMsg', s:color_hl_2, 'NONE', 214, 'NONE', 'bold')
 	call s:Hi('MoreMsg', s:color_hl_3, 'NONE', 153, 'NONE', 'bold')
 
        " Spelling
@@ -166,6 +166,11 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	" Statusline
 	call s:Hi('StatusLine', s:color_bright_2, 'NONE', 248, 'NONE', 'underline')
 	call s:Hi('StatusLineNC', s:color_bright_0, 'NONE', 240, 'NONE', 'underline')
+
+	" Tabline
+	call s:Hi('TabLine', s:color_bright_0, 'NONE', 240, 'NONE', 'NONE')
+	call s:Hi('TabLineFill', s:color_bright_0, 'NONE', 240, 'NONE', 'NONE')
+	call s:Hi('TabLineSel', s:color_bright_2, 'NONE', 248, 'NONE', 'bold')
 
 	" Highlighted syntax items
 	call s:HiFG('Comment', a:emphasize_comments ? s:color_hl_2 : s:color_bright_1, 243, 'italic')
@@ -221,6 +226,12 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	hi ALEWarning     guisp=#dd9922 gui=undercurl ctermfg=214 cterm=bold,underline
 	hi ALEErrorSign   guifg=#ff4444 ctermfg=203
 	hi ALEWarningSign guifg=#dd9922 ctermfg=214
+
+	" Spelling
+	hi link SpellBad   ALEError
+	hi link SpellCap   ALEError
+	hi link SpellRare  ALEError
+	hi link SpellLocal ALEWarning
 
 	" COC
 	hi CocErrorHighlight   guisp=#ff4444 gui=undercurl ctermfg=203 cterm=bold,underline
