@@ -147,11 +147,11 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	call s:Hi('WarningMsg', s:color_hl_2, 'NONE', 214, 'NONE', 'bold')
 	call s:Hi('MoreMsg', s:color_hl_3, 'NONE', 153, 'NONE', 'bold')
 
-       " Spelling
-       call s:Hi('SpellBad', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
-       call s:Hi('SpellCap', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
-       call s:Hi('SpellRare', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
-       call s:Hi('SpellLocal', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
+  " Spelling
+  call s:Hi('SpellBad', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
+  call s:Hi('SpellCap', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
+  call s:Hi('SpellRare', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
+  call s:Hi('SpellLocal', s:color_hl_1, 'NONE', 203, 'NONE', 'underline')
 
 	" Parens
 	call s:Hi('MatchParen', s:color_dark_3, s:color_hl_2, 16, 214, 'NONE')
@@ -222,16 +222,16 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	hi link CursorWordHighlight Underlined
 
 	" ALE
-	hi ALEError       guisp=#ff4444 gui=undercurl ctermfg=203 cterm=bold,underline
-	hi ALEWarning     guisp=#dd9922 gui=undercurl ctermfg=214 cterm=bold,underline
+	hi ALEError       guisp=#ff4444 gui=undercurl ctermfg=203 cterm=underline
+	hi ALEWarning     guisp=#dd9922 gui=undercurl ctermfg=214 cterm=underline
 	hi ALEErrorSign   guifg=#ff4444 ctermfg=203
 	hi ALEWarningSign guifg=#dd9922 ctermfg=214
 
 	" COC
-	hi CocErrorHighlight   guisp=#ff4444 gui=undercurl ctermfg=203 cterm=bold,underline
-	hi CocWarningHighlight guisp=#dd9922 gui=undercurl ctermfg=214 cterm=bold,underline
-	hi CocInfoHighlight    guisp=#00afff gui=undercurl ctermfg=153 cterm=bold,underline
-	hi CocHintHighlight    guisp=#00afff gui=undercurl ctermfg=153 cterm=bold,underline
+	hi CocErrorHighlight   guisp=#ff4444 gui=undercurl ctermfg=203 cterm=underline
+	hi CocWarningHighlight guisp=#dd9922 gui=undercurl ctermfg=214 cterm=underline
+	hi CocInfoHighlight    guisp=#00afff gui=undercurl ctermfg=153 cterm=underline
+	hi CocHintHighlight    guisp=#00afff gui=undercurl ctermfg=153 cterm=underline
 	hi CocErrorSign        guifg=#ff4444 ctermfg=203
 	hi CocWarningSign      guifg=#dd9922 ctermfg=214
 	hi CocInfoSign         guifg=#00afff ctermfg=153
